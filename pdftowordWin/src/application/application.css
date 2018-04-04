@@ -1,0 +1,15 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.theme {
+    master-color: grey;
+    -fx-background-color: derive(master-color, 70%);
+    -fx-background-image: url(res/back.png) ;
+    -fx-font-size: 14px;
+}
+
+.darkList {
+    -fx-background-color: white;
+}
+
+.dialog{
+	-fx-background-color: #F0F0F0
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="theme" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PdfToWordController">
+   <children>
+      <TabPane prefHeight="580.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="PDF转WORD">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#addFile" text="添加文件" />
+                              <Button mnemonicParsing="false" onAction="#convertPdfToWord" text="开始转换">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <TableView fx:id="FileTable" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: white;">
+                          <columns>
+                                  <TableColumn fx:id="colSelect" prefWidth="75.0" text="选择" />
+                                  <TableColumn fx:id="colFileName" prefWidth="279.0" text="文件名称" />
+                                  <TableColumn fx:id="colStatus" prefWidth="150.0" text="状态" />
+                                  <TableColumn fx:id="colDel" prefWidth="73.0" text="删除" />
+                                  <TableColumn fx:id="colOpen" prefWidth="75.0" text="打开" />
+                              	  <TableColumn fx:id="colZhqj" prefWidth="150.0" text="转换区间" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+          <Tab disable="true" text="OCR">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#addFileOCR" text="添加文件" />
+                              <Button mnemonicParsing="false" onAction="#convertOCR" text="开始转换">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                        <TableView fx:id="FileTableOCR" prefHeight="416.0" prefWidth="800.0" style="-fx-background-color: white;">
+                          <columns>
+                                  <TableColumn fx:id="colSelectOCR" prefWidth="75.0" text="选择" />
+                                  <TableColumn fx:id="colFileNameOCR" prefWidth="279.0" text="文件名称" />
+                                    <TableColumn fx:id="colStatusOCR" prefWidth="85.0" text="状态" />
+                                    <TableColumn fx:id="colDelOCR" prefWidth="73.0" text="删除" />
+                                    <TableColumn fx:id="colOpenOCR" prefWidth="75.0" text="打开" />
+                                </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Hyperlink onAction="#linkRed214" text="官方论坛:http://www.red214.com" textFill="#a19d15" />
+   </children>
+</VBox>

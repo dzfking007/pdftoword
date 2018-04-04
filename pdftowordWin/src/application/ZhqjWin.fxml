@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="200.0" maxWidth="400.0" minHeight="200.0" minWidth="400.0" prefHeight="200.0" prefWidth="400.0" styleClass="dialog" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ZhqjWinController">
+   <children>
+      <TextField fx:id="zhqj_startPage" layoutX="14.0" layoutY="69.0" />
+      <TextField fx:id="zhqj_endPage" layoutX="225.0" layoutY="69.0" />
+      <Label layoutX="185.0" layoutY="73.0" text="至" />
+      <Button fx:id="zhqj_okBtn" layoutX="305.0" layoutY="163.0" mnemonicParsing="false" onAction="#ok" text="确定" />
+   </children>
+   <opaqueInsets>
+      <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+   </opaqueInsets>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   <effect>
+      <Glow level="0.0" />
+   </effect>
+</Pane>
